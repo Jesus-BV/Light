@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sube el brillo</title>
+  <link rel="stylesheet" href="Style.css">
+  <style>
+    .lamp-wrapper {
+      position: relative;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .lamp {
+      margin: 0 auto;
+    }
+
+    .control-text {
+      margin-top: 120px; /* Aumenta este valor para bajar el texto más */
+      margin-bottom: 50px; /* Ajusta este valor para crear espacio con el control de brillo */
+      font-size: 20px;
+      color: #333;
+      text-align: center;
+      word-wrap: break-word;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    form {
+      margin-top: 50px;
+    }
+
+    /* Ejemplo de clase para cambiar el estilo del texto */
+    .custom-font {
+      font-family: 'Georgia', sans-serif;
+      color: #8357eb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lamp-wrapper">
+    <div class="lamp-rope"></div>
+    <div class="lamp">
+      <div class="lamp-part -top">
+        <div class="lamp-part -top-part"></div>
+        <div class="lamp-part -top-part right"></div>
+      </div>
+      <div class="lamp-part -body"></div>
+      <div class="lamp-part -body right"></div>
+      <div class="lamp-part -bottom"></div>
+      <div class="blub"></div>
+    </div>
+    <div class="wall-light-shadow"></div>
+  </div>
+  
+  <!-- Texto centrado entre la lámpara y el control de brillo -->
+  <div class="control-text custom-font">
+    <p>Por si aún te lo preguntas.</p>
+    <p>Sí, todavía, mucho y con toda el alma.</p>
+    <p>𖹭 ≽ - ˕ •マ</p>
+    <p>¿Salimos?</p>
+  </div>
+  
+  <!-- Control deslizante para el brillo -->
+  <form oninput="body.setAttribute('data-light', slider.value)">
+    <div class="icon sun">
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+    </div>
+    <input type="range" id="slider" value="0" min="0" max="10">
+  </form>
+
+</body>
+</html>
